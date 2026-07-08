@@ -11,7 +11,7 @@ const DEFAULT_POLL_INTERVAL_MS = 30_000;
 // only exists to recover from a silently-wedged connection. When the stream
 // is down the poll reverts to the normal interval and becomes the primary
 // refresh path.
-const DEFAULT_SAFETY_NET_POLL_INTERVAL_MS = 15 * 60 * 1_000;
+const DEFAULT_SAFETY_NET_POLL_INTERVAL_MS = 10 * 60 * 1_000;
 const STREAM_BACKOFF_INITIAL_MS = 1_000;
 const STREAM_BACKOFF_MAX_MS = 30_000;
 // A connection must stay open at least this long before we treat it as

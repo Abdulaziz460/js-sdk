@@ -1061,7 +1061,7 @@ describe("datafile patch frames", () => {
 
     // Recovery is via the safety-net poll (no proactive reconnect): while the
     // stream is healthy it runs at the slow safety cadence and resyncs to v7.
-    await vi.advanceTimersByTimeAsync(15 * 60 * 1_000);
+    await vi.advanceTimersByTimeAsync(10 * 60 * 1_000);
 
     expect(calls.length).toBeGreaterThanOrEqual(2);
     expect((await client.evaluate("checkout", false, CTX)).value).toBe(true);
